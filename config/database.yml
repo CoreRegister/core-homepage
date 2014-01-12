@@ -21,6 +21,7 @@ test:
 
 production:
   adapter: postgresql
+  database: core_production
   encoding: unicode
   database: core
   pool: 5
