@@ -72,3 +72,69 @@ nav
 
     &:last-child
       padding-right: 0
+
+#hero
+  border-bottom: 1px solid $line-color
+  padding-bottom: 40px
+  margin-bottom: 40px
+
+  h1, h2
+    line-height: 1.2
+
+  h1
+    font-size: 39px
+    color: $header-color
+    font-weight: bold
+    padding-bottom: 10px
+
+  h2
+    font-size: 24px
+    color: $text-color
+    padding-bottom: 20px
+
+#home-illustration
+  width: 418px
+  height: 269px
+  background: image-url('hero-image.png')
+  margin: 0 auto
+  margin-top: 15px
+
+#contact-card
+  background-color: #fff
+  @include border-radius(3px)
+  @include box-shadow(darken($background-color, 10%) 0 1px 2px)
+  padding: 30px
+
+  h3
+    font-size: 22px
+    color: $header-color
+    border-bottom: 1px solid lighten($line-color, 5%)
+    padding-bottom: 25px
+    margin-bottom: 25px
+
+  input
+    width: 100%
+    border: 1px solid $line-color
+    @include border-radius(3px)
+    padding: 12px 17px
+    font-size: 17px
+    font-family: $font-stack-body
+    -webkit-font-smoothing: antialiased 
+    margin-bottom: 10px
+    outline: 0
+
+    &:focus
+      border: 1px solid darken($line-color, 15%)
+
+  input[type="text"]
+    @include box-shadow(lighten($background-color, 3%) 0 1px 2px inset)
+
+  input[type="submit"]
+    background-color: $base-color
+    color: #fff
+    outline: 0
+    cursor: pointer
+    font-weight: bold
+    font-size: 20px
+    border: 1px solid $base-color
+    margin-top: 15px
