@@ -51,3 +51,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Added from https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor'
+
