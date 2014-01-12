@@ -1,0 +1,43 @@
+doctype
+html
+  head
+    title Core
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+
+    script src="//use.typekit.net/xex8ggb.js" type="text/javascript"
+    javascript:
+      | try{Typekit.load();}catch(e){}
+
+    = csrf_meta_tags
+  body
+    header
+      #body-width.clearfix
+        #logo
+        nav
+          ul
+            li
+              = link_to "Home", "#"
+            li
+              = link_to "About", "#"
+            li
+              = link_to "Product", "#"
+            li
+              = link_to "Careers", "#"
+            li
+              = link_to "Contact Us", "#"
+            li.call-to-action Consultation
+
+    #body-width
+      = yield
+
+    footer#body-width
+      .copyright
+        | &copy; 2013 Core Corporation. All rights reserved.
+
+      #footer-nav
+        = link_to "Product", "#"
+        | &#150;
+        = link_to "Careers", "#"
+        | &#150;
+        = link_to "About", "#"
