@@ -11,33 +11,9 @@ html
 
     = csrf_meta_tags
   body
-    header
-      #body-width.clearfix
-        #logo
-        nav
-          ul
-            li
-              = link_to "Home", "#"
-            li
-              = link_to "About", "#"
-            li
-              = link_to "Product", "#"
-            li
-              = link_to "Careers", "#"
-            li
-              = link_to "Contact Us", "#"
-            li.call-to-action Consultation
+    = render 'shared/header'
 
     #body-width
       = yield
 
-    footer#body-width.clearfix
-      .copyright
-        | &copy; 2013 Core Corporation. All rights reserved.
-
-      #footer-nav
-        = link_to "Product", "#"
-        | &#150;
-        = link_to "Careers", "#"
-        | &#150;
-        = link_to "About", "#"
+    = render 'shared/footer'
