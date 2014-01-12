@@ -6,6 +6,8 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
+  database: core
   pool: 5
   timeout: 5000
 
