@@ -1,0 +1,17 @@
+header
+  #body-width.clearfix
+    = link_to "", root_path, id: 'logo'
+    nav
+      ul
+        li
+          = link_to "Home", root_path
+        li
+          = link_to "About", :about
+        li
+          = link_to "Product", "#"
+        li
+          = link_to "Careers", "#"
+        li
+          = link_to "Contact Us", "#"
+        li
+          = link_to "Consultation", "#", class: 'call-to-action'
