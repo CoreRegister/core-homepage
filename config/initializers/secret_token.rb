@@ -1,1 +1,1 @@
-core::Application.config.secret_token = ENV['SECRET_TOKEN']
+Core::Application.config.secret_token = ENV['SECRET_TOKEN']
