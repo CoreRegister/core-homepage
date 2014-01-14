@@ -7,6 +7,7 @@ gem 'rails_12factor', group: :production
 gem 'rails', '4.1.0.beta1'
 
 # Use sqlite3 as the database for Active Record
+<<<<<<< HEAD
 # gem 'sqlite3'
 
 #group :development, :test do
@@ -15,6 +16,10 @@ gem 'rails', '4.1.0.beta1'
 #group :production do
 #  gem 'pg'
 #end
+=======
+#gem 'sqlite3'
+gem 'pg', '0.15.1'
+>>>>>>> 3d0278b46f8b116c678165a4219087bf90f2c1a8
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
@@ -58,4 +63,11 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+<<<<<<< HEAD
 ruby "1.9.3"
+=======
+
+# Added from https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor'
+
+>>>>>>> 3d0278b46f8b116c678165a4219087bf90f2c1a8
