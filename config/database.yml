@@ -14,7 +14,6 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-<<<<<<< HEAD
 development:
   adapter: postgresql
   pool: 5
@@ -22,7 +21,6 @@ development:
   database: core
   host: localhost
   user: mortonch
-=======
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -73,6 +71,10 @@ production:
   pool: 5
   timeout: 5000
 
-production:
-  <<: *default
-  database: core_production
+development:
+  adapter: postgresql
+  database: core_development
+  encoding: unicode
+  database: core
+  pool: 5
+  timeout: 5000

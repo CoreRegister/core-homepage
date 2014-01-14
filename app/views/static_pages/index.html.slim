@@ -12,13 +12,22 @@
     #contact-card
       h3 Schedule a free consultation
 
-      input type="text" placeholder="Name"
-      input type="text" placeholder="Email"
-      input type="text" placeholder="Phone number"
-      input type="text" placeholder="Type of business"
-      input type="text" placeholder="Number of locations"
-
-      input type="submit" value="Setup Free Consultation"
+      = form_for @consultation do |form|
+        fieldset.fields
+          .field
+            = form.label :name
+            = form.text_field :name
+          .field
+            = form.label :email
+            = form.text_field :email
+          .field
+            = form.label :subject
+            = form.text_field :subject
+          .field
+            = form.label :body
+            = form.text_area :body
+        fieldset.actions
+          = form.submit "Setup Free Consultation"
 
 #feature-grid
   h3
