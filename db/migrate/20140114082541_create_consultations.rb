@@ -4,7 +4,7 @@ class CreateConsultations < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :phone
-      t.string :type
+      t.string :bustype
       t.integer :locations
 
       t.timestamps

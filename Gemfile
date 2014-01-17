@@ -60,8 +60,9 @@ gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
-ruby "1.9.3"
+ gem 'debugger', group: [:development, :test]
+
+ gem 'protected_attributes'
 
 
 # Added from https://devcenter.heroku.com/articles/ruby-support#injected-plugins

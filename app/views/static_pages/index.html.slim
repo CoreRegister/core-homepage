@@ -11,23 +11,13 @@
   .fourty
     #contact-card
       h3 Schedule a free consultation
-
-      = form_for @consultation do |form|
-        fieldset.fields
-          .field
-            = form.label :name
-            = form.text_field :name
-          .field
-            = form.label :email
-            = form.text_field :email
-          .field
-            = form.label :subject
-            = form.text_field :subject
-          .field
-            = form.label :body
-            = form.text_area :body
-        fieldset.actions
-          = form.submit "Setup Free Consultation"
+      = form_tag :create => :create, :id => @consultation_params do |form|
+        = text_field :consultation_params, :name, :placeholder => "Name"
+        = text_field :consultation_params, :email, :placeholder => "Email Address"
+        = text_field :consultation_params, :phone, :placeholder => "Phone Number"
+        = text_field :consultation_params, :bustype, :placeholder => "Type of Business"
+        = text_field :consultation_params, :locations, :placeholder => "Number of Locations"
+        = submit_tag( "Setup Free Consultation" )
 
 #feature-grid
   h3
