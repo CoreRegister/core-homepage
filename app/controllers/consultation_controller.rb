@@ -6,7 +6,6 @@ class ConsultationController < ApplicationController
   def create
     @consultation = Consultation.build(consultation_params)
     if @consultation.save
-      flash[:success] = “Your request was received!”
       redirect_to consultation_path
     else
       render ‘new’

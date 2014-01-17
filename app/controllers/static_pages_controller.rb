@@ -11,7 +11,6 @@ def create
 #  consultation = Consultation.new(name: '', email: '', phone: '')
   @consultation = Consultation.create(consultation_params)
   @consultation.save
-  flash.now[:alert] = 'Error while sending message!'
 end
 
 def about

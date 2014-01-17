@@ -66,4 +66,3 @@ gem 'unicorn'
 
 
 # Added from https://devcenter.heroku.com/articles/ruby-support#injected-plugins
-gem 'rails_12factor'
