@@ -11,6 +11,8 @@ def create
 #  consultation = Consultation.new(name: '', email: '', phone: '')
   @consultation = Consultation.create(consultation_params)
   @consultation.save
+  UserMailer.new_lead_email(@consultation).deliver
+  
 end
 
 def about
