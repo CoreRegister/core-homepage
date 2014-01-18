@@ -3,8 +3,10 @@ footer#body-width.clearfix
     | &copy; 2013 Core Corporation. All rights reserved.
 
   #footer-nav
-    = link_to "Product", "#"
+  	= link_to "Home", root_path
+  	| &#150;
+    = link_to "About", "/#hero" 
     | &#150;
-    = link_to "Careers", "#"
-    | &#150;
-    = link_to "About", :about
+    = link_to "Product", "/#feature-grid"
+    /| &#150;
+    /= link_to "Careers", "#"
