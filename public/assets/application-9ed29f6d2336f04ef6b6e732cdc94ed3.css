@@ -1,0 +1,607 @@
+/* ---------------------
+ * FIDDY.CSS
+ *
+ * A no-bullshit fluid grid system that makes as few assumptions
+ * as possible. It is perfect for nesting grids logically.
+ * Also it doesn't use arbitrary columns that are difficult
+ * to visualize - it uses percentages.
+ * It has no default padding so you can actually add borders
+ * to it without specifically targeting the div.
+ *
+ * GENERAL USAGE
+ * Wrap a .grid-row class around any rows you want, clearfix is
+ * already done for you. All padding increments of 5% exist
+ *
+ * PADDING
+ * If you want vertical padding on anything, just add a
+ * vertical-padding class to it
+ * If you want horizontal padding on anything, just add a
+ * horizontal-padding class to it
+ * If you want combination padding just do stuff like
+ * .padding-top-left or .padding-bottom-right
+ *
+ * OFFSETS
+ * Want to do an offset? Just do .offset.[offset-width]
+ * so for example, .offset.fifty creates an offset of 50%
+ * -------------------- */
+/* --- VARIABLES --- */
+/* --- MIXINS --- */
+/* --- GENERAL CSS --- */
+/* line 53, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.pull-left {
+  float: left;
+}
+
+/* line 56, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.pull-right {
+  float: right;
+}
+
+/* line 59, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row {
+  width: 100%;
+  position: relative;
+  zoom: 1;
+}
+/* line 39, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row:before, .grid-row:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+/* line 44, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row:after {
+  clear: both;
+}
+/* line 64, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row > div {
+  zoom: 1;
+}
+/* line 39, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row > div:before, .grid-row > div:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+/* line 44, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row > div:after {
+  clear: both;
+}
+/* line 68, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding {
+  padding: 10px;
+}
+/* line 71, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-vertical {
+  padding: 10px 0;
+}
+/* line 74, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-horizontal {
+  padding: 0 10px;
+}
+/* line 77, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-top-left {
+  padding: 10px 0 0 10px;
+}
+/* line 80, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-top-right {
+  padding: 10px 10px 0 0;
+}
+/* line 83, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-bottom-left {
+  padding: 0 0 10px 10px;
+}
+/* line 86, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-bottom-right {
+  padding: 0 10px 10px 0;
+}
+/* line 90, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-left {
+  padding: 0 0 0 10px;
+}
+/* line 93, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-right {
+  padding: 0 10px 0 0;
+}
+/* line 96, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-top {
+  padding: 10px 0 0 0;
+}
+/* line 99, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .padding-bottom {
+  padding: 0 0 10px 0;
+}
+/* line 102, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .all-padding {
+  padding: 10px;
+}
+/* line 106, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .eighth {
+  width: 12.5%;
+  float: left;
+}
+/* line 111, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .offset:after {
+  content: ".";
+  visibility: hidden;
+}
+/* line 115, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .five {
+  width: 5%;
+  float: left;
+}
+/* line 118, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .ten {
+  width: 10%;
+  float: left;
+}
+/* line 121, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .fifteen {
+  width: 15%;
+  float: left;
+}
+/* line 124, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .twenty {
+  width: 20%;
+  float: left;
+}
+/* line 127, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .twenty-five {
+  width: 25%;
+  float: left;
+}
+/* line 130, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .thirty {
+  width: 30%;
+  float: left;
+}
+/* line 133, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .thirty-three {
+  width: 33.33%;
+  float: left;
+}
+/* line 136, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .thirty-five {
+  width: 35%;
+  float: left;
+}
+/* line 139, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .fourty {
+  width: 40%;
+  float: left;
+}
+/* line 142, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .fourty-five {
+  width: 45%;
+  float: left;
+}
+/* line 145, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .fifty {
+  width: 50%;
+  float: left;
+}
+/* line 148, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .fifty-five {
+  width: 55%;
+  float: left;
+}
+/* line 151, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .sixty {
+  width: 60%;
+  float: left;
+}
+/* line 154, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .sixty-five {
+  width: 65%;
+  float: left;
+}
+/* line 157, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .seventy {
+  width: 70%;
+  float: left;
+}
+/* line 160, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .seventy-five {
+  width: 75%;
+  float: left;
+}
+/* line 163, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .eighty {
+  width: 80%;
+  float: left;
+}
+/* line 166, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .eighty-five {
+  width: 85%;
+  float: left;
+}
+/* line 169, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .ninety {
+  width: 90%;
+  float: left;
+}
+/* line 172, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .ninety-five {
+  width: 95%;
+  float: left;
+}
+/* line 175, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/grid.css.sass */
+.grid-row .one-hundred {
+  width: 100%;
+  float: left;
+}
+/* line 17, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /Users/mortonch/.rvm/gems/ruby-1.9.3-p448@rails3tutorial2ndEd/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+/* This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= reset
+ *
+ *
+ */
+/* line 22, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 25, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 28, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+html {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  background-color: #e9eff2;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 33, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+a {
+  color: #5e8fc1;
+  text-decoration: none;
+}
+/* line 37, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 40, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+h1, h2, h3, h4 {
+  font-family: "effra", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+/* line 43, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#body-width {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 47, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+header {
+  width: 100%;
+  border-bottom: 1px solid #d9e0e4;
+  padding: 30px 0;
+  margin-bottom: 40px;
+}
+/* line 53, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+header a#logo {
+  width: 110px;
+  height: 31px;
+  display: block;
+  background: url(/assets/logo.png) no-repeat;
+  float: left;
+}
+/* line 60, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+header a#logo:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 63, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+header a.call-to-action {
+  background-color: #5e8fc1;
+  color: white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  padding: 7px 15px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* line 71, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+nav {
+  float: right;
+  font-family: "effra", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 18px;
+}
+/* line 76, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+nav a {
+  color: #4d6b7b;
+}
+/* line 79, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+nav li {
+  display: inline-block;
+  padding-right: 25px;
+}
+/* line 83, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+nav li:last-child {
+  padding-right: 0;
+}
+
+/* line 86, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#hero {
+  border-bottom: 1px solid #d9e0e4;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+/* line 91, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#hero h1, #hero h2 {
+  line-height: 1.3;
+}
+/* line 94, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#hero h1 {
+  font-size: 39px;
+  color: #4d6b7b;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+/* line 100, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#hero h2 {
+  font-size: 24px;
+  color: #7d94a0;
+  padding-bottom: 20px;
+}
+
+/* line 105, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#home-illustration {
+  width: 418px;
+  height: 269px;
+  background: url(/assets/hero-image.png);
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+/* line 112, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: #c9d8df 0 1px 2px;
+  -moz-box-shadow: #c9d8df 0 1px 2px;
+  box-shadow: #c9d8df 0 1px 2px;
+  padding: 30px;
+  margin-left: 30px;
+}
+/* line 119, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card h3 {
+  font-size: 22px;
+  color: #4d6b7b;
+  border-bottom: 1px solid #e8ecef;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+/* line 126, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card input {
+  width: 100%;
+  border: 1px solid #d9e0e4;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 12px 17px;
+  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
+  outline: 0;
+}
+/* line 137, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card input:focus {
+  border: 1px solid #acbcc4;
+}
+/* line 140, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card input[type="text"] {
+  -webkit-box-shadow: #f3f6f8 0 1px 2px inset;
+  -moz-box-shadow: #f3f6f8 0 1px 2px inset;
+  box-shadow: #f3f6f8 0 1px 2px inset;
+}
+/* line 143, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card input[type="submit"] {
+  background-color: #5e8fc1;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid #5e8fc1;
+  margin-top: 15px;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+/* line 154, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#contact-card input[type="submit"]:hover {
+  background-color: #4275aa;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+/* line 159, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid h3 {
+  font-size: 32px;
+  color: #4d6b7b;
+  font-family: "effra", "Helvetica Neue", Helvetica, arial, sans-serif;
+  margin: 60px 0;
+}
+/* line 165, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .thirty-three {
+  padding: 0 15px;
+}
+/* line 168, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .thirty-three:first-child {
+  padding-left: 0;
+}
+/* line 170, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .thirty-three:last-child {
+  padding-right: 0;
+}
+/* line 173, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .learn-more {
+  font-weight: bold;
+}
+/* line 176, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .feature-item {
+  margin-bottom: 50px;
+}
+/* line 179, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .feature-item h4 {
+  font-size: 21px;
+  color: #4d6b7b;
+  font-family: "effra", "Helvetica Neue", Helvetica, arial, sans-serif;
+  margin-bottom: 15px;
+}
+/* line 185, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+#feature-grid .feature-item p {
+  line-height: 1.5;
+  color: #7d94a0;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+/* line 191, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite {
+  width: 37px;
+  height: 37px;
+  background: url(/assets/feature-sprite.png);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 198, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite#lock {
+  background-position: 0 0;
+}
+/* line 201, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite#brick {
+  background-position: -38px 0;
+}
+/* line 204, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite#server {
+  background-position: -76px 0;
+}
+/* line 207, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite#network {
+  background-position: 0 -38px;
+}
+/* line 210, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite#money {
+  background-position: -38px -38px;
+}
+/* line 213, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+.feature-sprite#star {
+  background-position: -76px -38px;
+}
+
+/* line 216, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+footer {
+  border-top: 1px solid #d9e0e4;
+  width: 100%;
+  padding: 40px 0;
+  font-size: 15px;
+}
+/* line 222, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+footer .copyright {
+  float: left;
+  color: #4d6b7b;
+}
+/* line 226, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+footer #footer-nav {
+  float: right;
+  color: #a9c0cc;
+}
+/* line 230, /Users/mortonch/Documents/Core/website/core-homepage/app/assets/stylesheets/application.css.sass */
+footer #footer-nav a {
+  margin: 0 10px;
+}
